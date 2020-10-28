@@ -1,0 +1,21 @@
+{
+  "name": "web-application",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "scripts": {
+    "start": "parcel index.html --open",
+    "start-no-open": "parcel index.html --hmr-port 5678",
+    "build": "parcel build index.html"
+  }
+}
