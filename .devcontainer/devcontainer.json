@@ -15,11 +15,17 @@
 
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
+    /* Linters */
     "dbaeumer.vscode-eslint",
     "ms-vscode.vscode-typescript-tslint-plugin",
+    /* Code Formatting */
     "esbenp.prettier-vscode",
+    /* Help to identify nested brackets */
     "bracket-pair-colorizer-2.colors",
-    "github.vscode-pull-request-github"
+    /* highlights colours in CSS */
+    "naumovs.color-highlight"
+    /* mega git integration */
+    "github.vscode-pull-request-github",
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
