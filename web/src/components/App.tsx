@@ -2,33 +2,47 @@
  * Import Dependancies
  */
 import React from 'react';
-
-/*
- *Import App Component Stylesheet
- */
-//import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
 
 /*
  *Import Components
  */
-import { Button } from './common/Button';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 /*
  * type definitions / interfaces
  */
 
-/** App component tooltip */
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App-header">
-        <h1 className="App-header-main">The Super Amazing Mega-App</h1>
-        <h4 className="App-header-sub">maybe...</h4>
-
-        <Button>Click Me</Button>
-      </div>
-    );
-  }
+const GlobalStyle = createGlobalStyle`
+body {
+  background: white;
+  min-height: 100vh;
+  margin: 0;
+  color: black;
+  font-family: 'Kaushan Script';
 }
+
+`;
+
+/** App component tooltip */
+const App = () => {
+  return (
+    <>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
+};
 
 export default App;
