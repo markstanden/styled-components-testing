@@ -17,7 +17,6 @@ import Login from './pages/Login';
 
 const GlobalStyle = createGlobalStyle`
 body {
-  background: white;
   min-height: 100vh;
   margin: 0;
   color: black;

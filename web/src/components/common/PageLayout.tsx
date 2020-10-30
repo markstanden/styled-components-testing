@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Header };
+import { Header } from '../common';
 
 const Content = styled.main`
   max-width: 800px;
@@ -20,7 +20,7 @@ const Content = styled.main`
   }
 `;
 
-const PageLayout = ({ children }) => {
+export const PageLayout = ({ children }) => {
   return (
     <>
       <Header />
@@ -28,5 +28,3 @@ const PageLayout = ({ children }) => {
     </>
   );
 };
-
-export default PageLayout;
