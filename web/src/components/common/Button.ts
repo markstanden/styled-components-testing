@@ -9,19 +9,19 @@ interface ButtonProps {
 
 const Button = styled.button`
   color: white;
-  background: ${(p: ButtonProps) => (p.secondary ? 'black' : '#f8049c')};
+  background: ${(p: ButtonProps) => (p.secondary ? '#fdd54f' : '#f8049c')};
   font-weight: bold;
   ${(p: ButtonProps) =>
     p.large
       ? css`
-          padding: 5rem;
-          border-radius: 2rem;
-          font-size: 4rem;
+          padding: 12px;
+          border-radius: 5px;
+          font-size: 1.5rem;
         `
       : css`
           padding: 8px;
           border-radius: 4px;
-          font-size: 2rem;
+          font-size: 1rem;
         `}
 
   box-shadow: none;

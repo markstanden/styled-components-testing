@@ -9,7 +9,7 @@ import { createGlobalStyle } from 'styled-components';
  *Import Components
  */
 import Home from './pages/Home';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 
 /*
  * type definitions / interfaces
