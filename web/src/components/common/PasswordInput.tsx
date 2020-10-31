@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { Input, InputProps } from './index';
 
 interface PasswordInputProps extends InputProps {
-  type?: string | undefined;
-  placeholder?: string | undefined;
+  type?: string;
+  placeholder?: string;
 }
 
-const PasswordInputStyled = styled(Input).attrs(() => ({
+const PasswordInputStyled = styled(Input).attrs<PasswordInputProps>(() => ({
   type: 'password',
   placeholder: 'Password',
 }))`
@@ -39,7 +39,10 @@ const ToggleButton = styled.div`
   color: black;
 `;
 
-export const PasswordInput = ({ value, ...props }: InputProps) => {
+export const PasswordInput: FunctionComponent<PasswordInputProps> = ({
+  value,
+  ...props
+}) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (

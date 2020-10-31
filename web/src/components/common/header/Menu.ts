@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { MyThemeProps } from '../../themes/MyThemeProps';
 
-export interface MenuProps {
+export interface MenuProps<T> {
   open: boolean;
+  theme: T;
 }
 
-export const Menu = styled.nav<MenuProps>`
-  display: ${(p) => (p.open ? 'block' : 'none')};
+export const Menu = styled.nav<MenuProps<MyThemeProps>>`
+  display: ${p => (p.open ? 'block' : 'none')};
   font-family: 'open sans';
   position: absolute;
   width: 100%;
@@ -13,7 +15,7 @@ export const Menu = styled.nav<MenuProps>`
   left: 0;
   padding: 8px;
   box-sizing: border-box;
-  border-bottom: 3px solid #fdd54f;
+  border-bottom: 3px solid ${p => p.theme.secondaryColor};
   background: white;
 
   @media (min-width: 768px) {

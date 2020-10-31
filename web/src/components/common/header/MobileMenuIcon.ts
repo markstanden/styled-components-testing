@@ -9,8 +9,9 @@ export const MobileMenuIcon = styled.div`
   > div {
     height: 3px;
     background: black;
-    margin: 5px 0;
+    margin: 6px 0;
     width: 100%;
+    border: none;
   }
 
   @media (min-width: 768px) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
 import { Header } from '../common';
@@ -20,7 +20,7 @@ const Content = styled.main`
   }
 `;
 
-export const PageLayout = ({ children }) => {
+export const PageLayout: FunctionComponent<{}> = ({ children }) => {
   return (
     <>
       <Header />

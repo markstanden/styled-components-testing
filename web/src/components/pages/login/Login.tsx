@@ -19,7 +19,7 @@ const Login = () => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.persist();
-    setFormFields((state) => ({
+    setFormFields(state => ({
       ...state,
       [event.target.name]: event.target.value,
     }));

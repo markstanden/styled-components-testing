@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { MyThemeProps } from '../themes/MyThemeProps';
 
 const rotation = keyframes`
 from{
@@ -10,10 +11,14 @@ transform: rotate(360deg);
 
 `;
 
-const Spinner = styled.div`
+interface SpinnerProps<T> {
+  theme?: T;
+}
+
+const Spinner = styled.div<SpinnerProps<MyThemeProps>>`
   height: 30px;
   width: 30px;
-  border: 1px solid #f8049c;
+  border: 1px solid ${p => p.theme.primaryColor};
   border-radius: 50%;
   border-top: none;
   border-right: none;
