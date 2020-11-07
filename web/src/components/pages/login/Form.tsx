@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button, Input } from '../../common';
 
 interface FormProps {}
 
@@ -12,8 +13,15 @@ export const Form = styled.form<FormProps>`
   color: black;
   border-radius: 4px;
 
+  > ${Button}:first-of-type {
+    margin-top: 40px;
+  }
+
   .alt-text {
     text-align: center;
     margin: 10px 0;
+  }
+  > ${Input} {
+    margin-top: 20px;
   }
 `;

@@ -23,5 +23,5 @@ export const StyledLink = styled(Link)`
   /* Had some fun with this one.  To destructure the props, you must put both sides of the arrow in brackets. */
   /* this compiles ok: */
   font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
-  color: black;
+  color: ${p => p.theme.bodyFontColor};
 `;

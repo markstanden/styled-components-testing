@@ -16,7 +16,7 @@ export const Menu = styled.nav<MenuProps<MyThemeProps>>`
   padding: 8px;
   box-sizing: border-box;
   border-bottom: 3px solid ${p => p.theme.secondaryColor};
-  background: white;
+  background: ${p => p.theme.bodyBackgroundColor};
 
   @media (min-width: 768px) {
     position: relative;

@@ -39,7 +39,7 @@ const Notch = styled.div<NotchProps<MyThemeProps>>`
 
 export interface ToggleProps<T = {}> {
   isActive?: boolean;
-  onToggle: () => {};
+  onToggle: () => void;
   theme?: T;
 }
 

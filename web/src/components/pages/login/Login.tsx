@@ -49,6 +49,7 @@ const Login = () => {
           <Spinner />
         ) : (
           <>
+            <span>Login if you have an account</span>
             <Input
               type="text"
               name="username"

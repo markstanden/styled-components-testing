@@ -10,6 +10,14 @@ import React, {
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
+declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  // DefaultTheme is empty by default, so we can add properties here or add from the MyThemeProps.ts file.\
+  export interface DefaultTheme extends MyThemeProps {
+    switchTheme: () => void;
+  }
+}
+
 /*
  *Import Components
  */
@@ -27,19 +35,15 @@ import { MyThemeProps } from './themes/MyThemeProps';
 
 const GlobalStyle = createGlobalStyle`
 body {
+  background: ${p => p.theme.bodyBackgroundColor};
   min-height: 100vh;
   margin: 0;
-  color: black;
+  color: ${p => p.theme.bodyFontColor};
   font-family: 'Kaushan Script';
+
 }
 
 `;
-
-interface AppState {
-  theme: MyThemeProps;
-}
-
-/** App component tooltip */
 const App: FunctionComponent = () => {
   const [theme, setTheme]: [
     MyThemeProps,
@@ -51,7 +55,7 @@ const App: FunctionComponent = () => {
       theme={{
         ...theme,
         switchTheme: () => {
-          setTheme(prevState => {
+          return setTheme(prevState => {
             return prevState.ID === themeID.light ? darkTheme : lightTheme;
           });
         },

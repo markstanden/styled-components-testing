@@ -5,4 +5,7 @@ export const lightTheme: MyThemeProps = {
   ID: themeID.light,
   primaryColor: 'lime',
   secondaryColor: 'orange',
+  bodyBackgroundColor: 'white',
+  bodyFontColor: 'black'
+
 };

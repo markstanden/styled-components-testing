@@ -8,7 +8,7 @@ export const MobileMenuIcon = styled.div`
 
   > div {
     height: 3px;
-    background: black;
+    background: ${p => p.theme.bodyFontColor};
     margin: 6px 0;
     width: 100%;
     border: none;
